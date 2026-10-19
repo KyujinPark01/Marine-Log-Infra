@@ -1,0 +1,14 @@
+# 실제 비밀값이 들어가는 파일 (예시 파일만 커밋)
+.env
+.env.*
+!.env.example
+
+# OS / 에디터
+.DS_Store
+.idea/
+.vscode/
+
+# 로컬 실행 중 생기는 데이터
+data/
+logs/
+*.log
