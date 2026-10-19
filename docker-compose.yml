@@ -24,7 +24,7 @@ services:
       retries: 10
 
   backend:
-    image: marinelog-backend
+    image: ${BACKEND_IMAGE:-marinelog-backend}
     restart: unless-stopped
     env_file: .env
     environment:
@@ -38,7 +38,7 @@ services:
       redis: { condition: service_healthy }
 
   frontend:
-    image: marinelog-frontend
+    image: ${FRONTEND_IMAGE:-marinelog-frontend}
     restart: unless-stopped
     ports:
       - "5173:80"
